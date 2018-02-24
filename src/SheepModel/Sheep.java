@@ -6,6 +6,7 @@
 package SheepModel;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -24,6 +25,27 @@ public class Sheep {
     private String LeavePlaceInfo;
     private String LeaveConveyor;
     private String Note;
+    static private ArrayList<Sheep> ListSheep;
+
+    
+    public Sheep(String Id) {
+        this.Id = Id;
+    }
+    public Sheep(String Id, Sheep Mother, LocalDate BirthDate, LocalDate LeaveDate, String ArrivePlaceInfo, char ArriveCode, char LeaveCode, String Sex, int BreedCode, String LeavePlaceInfo, String LeaveConveyor, String Note) {
+        this.Id = Id;
+        this.Mother = Mother;
+        this.BirthDate = BirthDate;
+        this.LeaveDate = LeaveDate;
+        this.ArrivePlaceInfo = ArrivePlaceInfo;
+        this.ArriveCode = ArriveCode;
+        this.LeaveCode = LeaveCode;
+        this.Sex = Sex;
+        this.BreedCode = BreedCode;
+        this.LeavePlaceInfo = LeavePlaceInfo;
+        this.LeaveConveyor = LeaveConveyor;
+        this.Note = Note;
+    }
+    
     
     
     
@@ -200,6 +222,20 @@ public class Sheep {
      */
     public void setNote(String Note) {
         this.Note = Note;
+    }
+
+    /**
+     * @return the ListSheep
+     */
+    public static ArrayList<Sheep> getListSheep() {
+        return ListSheep;
+    }
+
+    /**
+     * @param aListSheep the ListSheep to set
+     */
+    public static void setListSheep(ArrayList<Sheep> aListSheep) {
+        ListSheep = aListSheep;
     }
     
 }
